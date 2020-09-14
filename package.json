@@ -18,9 +18,8 @@
     "alex": "alex .",
     "test:integration": "jest test/integration",
     "test": "cd packages/react-scripts && node bin/react-scripts.js test",
-    "eslint": "eslint .",
-    "prettier": "prettier .",
-    "format": "npm run prettier -- --write"
+    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
+    "compile:lockfile": "node tasks/compile-lockfile.js"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
